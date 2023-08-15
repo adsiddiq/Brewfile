@@ -14,16 +14,11 @@
 # Options
 cask_args appdir: '~/Applications', require_sha: true
 
-# Taps
+# Taps (Repositories)
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'blacktop/tap'
-tap 'browsh-org/homebrew-browsh'
-tap 'espanso/espanso'
-tap 'jesseduffield/lazygit'
-tap 'koekeishiya/formulae'
-tap 'kdash-rs/kdash'
+tap homebrew/cask-fonts  
 
 #############################################################
 # Command Line                                              #
@@ -65,14 +60,7 @@ brew 'xsel'         # Copy paste access to the X clipboard
 brew 'zoxide'       # Auto-learning navigation (better cd)
 
 # CLI Monitoring and Performance Apps
-brew 'bmon'         # Bandwidth utilization monitor 
-brew 'ctop'         # Container metrics and monitoring
-brew 'dog'          # DNS lookup client (better dig)
-brew 'bpytop'       # Resource monitoring (like htop)
-brew 'dua-cli'      # Disk usage analyzer and monitor (better du)
-brew 'glances'      # Resource monitor + web and API
-brew 'goaccess'     # Web log analyzer and viewer
-brew 'gping'        # Interactive ping tool, with graph
+brew 'htop'         # Cross-platform interactive process viewer 
 brew 'speedtest-cli'# Command line speed test utility
 
 # CLI Productivity Apps
