@@ -114,6 +114,12 @@ fi
 
 show_intro
 
+# Install Xcode Command Line Tools.
+install_command_line_tools
+
+# Install Rosetta 2 on Apple Silicon Macs to run x86 apps.
+install_rosetta2
+
 # Check that Homebrew is installed, offer to install it if not present
 if ! hash "brew" 2> /dev/null; then
   echo -e "\n${QUESTION_COLOR}Homebrew isn't present on this system. Would you like to install it now? (y/N)${RESET}"
