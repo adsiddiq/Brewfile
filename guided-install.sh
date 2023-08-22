@@ -25,8 +25,7 @@ INFO_COLOR='\033[0;33m\x1b[2m'
 ERROR_COLOR='\033[1;31m'
 RESET='\033[0m'
 
-
-function separator() {
+separator() {
   echo "-----------------------------------------"
 }
 
