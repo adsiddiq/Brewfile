@@ -25,6 +25,35 @@ INFO_COLOR='\033[0;33m\x1b[2m'
 ERROR_COLOR='\033[1;31m'
 RESET='\033[0m'
 
+
+function separator() {
+  echo "-----------------------------------------"
+}
+
+install_command_line_tools() {
+  echo "Looking for Xcode Command Line Tools..."
+
+  if ! [ $(xcode-select -p) ]; then
+    echo "You don't have Command Line Tools installed"
+    echo "They are required to proceed with installation"
+    echo "Installing Command Line Tools..."
+
+    xcode-select --install
+    sudo xcodebuild -license accept
+  else
+    echo "Xcode Command Line Tools are already installed, so skipping to next step..."
+  fi
+  separator
+  sleep 1
+}
+
+install_rosetta2() {
+  if [[ $(uname -m) == 'arm64' ]]; then
+    echo "Installing Rosetta 2, to allow usage of x86 Apps on Apple Silicon Macs"
+    softwareupdate --install-rosetta --agree-to-license
+  fi
+}
+
 install_homebrew () {
   echo -en "\n🍺  ${HEADING_COLOR}Installing Homebrew${RESET}\n"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
