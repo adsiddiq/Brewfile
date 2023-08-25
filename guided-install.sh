@@ -56,7 +56,7 @@ install_rosetta2() {
 install_homebrew () {
   echo -en "\n🍺  ${HEADING_COLOR}Installing Homebrew${RESET}\n"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  export PATH=/opt/homebrew/bin:$PATH
+  export PATH=/opt/homebrew/bin:$PATH >> ~/.zshrc
 }
 
 download_brewfile () {
