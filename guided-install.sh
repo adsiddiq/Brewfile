@@ -91,6 +91,8 @@ install_apps () {
 show_intro () {
   echo -e "\n${QUESTION_COLOR}🍺 Lissy93/Brewfile - Installation Script${RESET}"
   echo -e "${INFO_COLOR}The following steps will be taken:"
+  echo "- Install XCode Xcode Command Line Tools (if not already installed)"
+  echo "- Install Rosetta 2 on Apple Silicon Macs to run x86 (Intel) apps.
   echo "- Check Homebrew is installed, prompt to download if not"
   echo "- If no Brewfile present, download from GitHub, othwesise prompt user"
   echo "- Update Homebrew and upgrade currently installed packages"
